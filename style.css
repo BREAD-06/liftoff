@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(imgs/background.jpg) no-repeat center center/cover;
+    color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: left;
+    margin-left: 30px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: 230px;
+    width: 70%;
+    position: absolute;
+    top: 135px;
+
+ 
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    border-bottom: 3px solid #0071c2;
+}
+
+.ss{
+    display: flex;
+    flex-direction: column;
+   
+    margin-right: 0px;
+    
+    
+}
+
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    background: white;
+    padding: 30px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 00px;
+}
+
+.form-group > from{
+    padding: 20px;
+    margin: 50px;
+    
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f8f8f8;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0071c2;
+    outline: none;
+    background: #e6f7ff;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 50px;
+    background: linear-gradient(to right, #5DA9FF, #005CFF);
+
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    width: 200px;
+    height: 43px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 530px;
+    
+}
+
+.btn:hover {
+    background-color: #142c69d4;
+}
+
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn:hover span {
+    padding-right: 25px;
+}
+
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.btn-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.fare-type {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.fare-type input[type="radio"] {
+    display: none;
+}
+
+.fare-type label {
+    position: relative;
+    font-size: 15px;
+    border: 1px solid rgba(59, 57, 57, 0.215);
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    word-spacing: -5px;
+    margin: 12px;
+    
+    
+}
+
+.fare-type input[type="radio"]:checked + label {
+    background-color: #0071c26a;
+    color: white;
+    border-color: #0071c24c;
+}
+
+.container1{
+    width: 150px;;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+    margin-top: 30px;
+}
+
+
+.special-fare{
+    display: flex;
+    justify-content: right;
+}
+
+.special-fare > p{
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 12px;
+    margin-right: 8px;
+    word-spacing: -4px;
+    box-sizing: border-box;
+    margin-top: 9px;
+}
+
+.extra-saving{
+    margin-top: 0px;
+    font-size: 15px;
+    border-radius:7px;
+    background: linear-gradient(to bottom, #2E8B57, #20B2AA);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.extra-saving > p{
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    margin: 3px;
+}
+
+
+.radio-buttons{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0px;
+}
