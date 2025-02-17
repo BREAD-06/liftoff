@@ -1,173 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://media-hosting.imagekit.io//f2638170d5664fff/Untitled%20design.png?Expires=1832953235&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=o0~GzgKGVdhNmBBHWWWC~1FsnYyr5b6v2-juS5EZLe8OjqCw5iaFpuHd8lSUtpaUDwXOVn0WWp1pXmen7zbm39x803KtrVnY0Xefo~e9EJMgNOmQJ1MHrlJIXM4FFosx29ZXa~mQIjMo2DF-BIRg37WllCs146h33rJMeCXp1oFEWUW34jvhEZXXPX1aoJae-gSpkXMoaIMoa18mxP6KKwZGbS7fJbm5aV4QLWqU-w~9C4BHfZdpz47Q4aHyd9VGQ93Z4Fdkv4EtBFe1L5IutetoVDLqc8pU3qqOrOmcrDnAfmWMsmIFB03OgyHeKigam1UHoLwK2GywM33o7o7V~g__">
+    <link rel="icon" type="image/x-icon"
+        href="https://media-hosting.imagekit.io//f2638170d5664fff/Untitled%20design.png?Expires=1832953235&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=o0~GzgKGVdhNmBBHWWWC~1FsnYyr5b6v2-juS5EZLe8OjqCw5iaFpuHd8lSUtpaUDwXOVn0WWp1pXmen7zbm39x803KtrVnY0Xefo~e9EJMgNOmQJ1MHrlJIXM4FFosx29ZXa~mQIjMo2DF-BIRg37WllCs146h33rJMeCXp1oFEWUW34jvhEZXXPX1aoJae-gSpkXMoaIMoa18mxP6KKwZGbS7fJbm5aV4QLWqU-w~9C4BHfZdpz47Q4aHyd9VGQ93Z4Fdkv4EtBFe1L5IutetoVDLqc8pU3qqOrOmcrDnAfmWMsmIFB03OgyHeKigam1UHoLwK2GywM33o7o7V~g__">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:wght@900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>MakeMyTrip Clone</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url(https://images.unsplash.com/photo-1519885277449-12eee5564d68?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center/cover;
-            color: black;
-        }
-        .header {
-            background-color: #2B2D42;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .nav {
-            display: flex;
-            justify-content: center;
-            background: white;
-            padding: 10px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-        }
-        .nav a {
-            color: black;
-            text-decoration: none;
-            padding: 14px 20px;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-        .nav a:hover {
-            border-bottom: 3px solid #0071c2;
-        }
-        .container {
-            width: 80%;
-            margin: 50px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        }
-        .form-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-        }
-        .form-group {
-            flex: 1;
-            min-width: 200px;
-        }
-        .form-group label {
-            font-weight: bold;
-            display: block;
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            background: #f8f8f8;
-            color: #333;
-            box-sizing: border-box;
-        }
-        .form-group input:focus, .form-group select:focus {
-            border-color: #0071c2;
-            outline: none;
-            background: #e6f7ff;
-        }
-        .btn {
-            display: inline-block;
-            border-radius: 50px;
-            background-color: #15257f;
-            border: none;
-            color: #FFFFFF;
-            text-align: center;
-            font-size: 20px;
-            padding: 8px;
-            width: 140px;
-            transition: all 0.5s;
-            cursor: pointer;
-            margin: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            position: relative;
-            left: 33rem;
-            top: 15px;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
 
-        .btn:hover{
-            background-color: #142c69d4;
-            }
-
-        .btn span{
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-            transition: 0.5s;
-            }
-
-        .btn span:after {
-            content: '\00bb';
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            right: -20px;
-            transition: 0.5s;
-            }
-
-            .btn:hover span {
-            padding-right: 25px;
-            }
-
-            .btn:hover span:after {
-            opacity: 1;
-            right: 0;
-            }
-
-    </style>
 </head>
+
 <body>
-    <div class="header">MakeMyTrip Clone</div>
+    <div class="header"><img src="imgs/icon.png" alt="icon" width="149px"></div>
     <div class="nav">
-        <a href="#">Flights</a>
-        <a href="#">Hotels</a>
-        <a href="#">Homestays</a>
-        <a href="#">Trains</a>
-        <a href="#">Buses</a>
-        <a href="#">Cabs</a>
+        <div class="ss">
+            <img src="imgs/plane.png" width="50px">
+            <a href="#">Flights</a>
+        </div>
+        <div class="ss">
+            <img src="imgs/hotel.png" width="50px">
+            <a href="#">Hotels</a>
+        </div>
+        <div class="ss"> 
+            <img src="imgs/homestay.png" width="50px">
+            <a href="#">Homestays</a>
+        </div>
+        <div class="ss">
+            <img src="imgs/train.png" width="50px">
+            <a href="#">Trains</a>
+        </div>
+        <div class="ss">
+            <img src="imgs/bus.png" width="50px">
+            <a href="#">Buses</a>
+        </div>
+        <div class="ss">
+            <img src="imgs/cab.png" width="50px">
+            <a href="#">Cabs</a>
+        </div>
+
+        
+        
+        
+       
+       
+       
+       
     </div>
-    
+
     <div class="container">
+       
         <h2>Book Your Travel</h2>
+
         <form>
             <div class="form-container">
+
                 <div class="form-group">
+                    
                     <label for="from">From:</label>
                     <input type="text" id="from" name="from" placeholder="Departure city">
                 </div>
+
                 <div class="form-group">
                     <label for="to">To:</label>
                     <input type="text" id="to" name="to" placeholder="Destination city">
                 </div>
+
                 <div class="form-group">
                     <label for="date">Departure Date:</label>
                     <input type="date" id="date" name="date">
                 </div>
+
                 <div class="form-group">
                     <label for="return-date">Return Date:</label>
                     <input type="date" id="return-date" name="return-date" placeholder="Optional">
                 </div>
+
                 <div class="form-group">
                     <label for="travellers">Travellers:</label>
                     <input type="number" id="travellers" name="travellers" min="1" value="1">
                 </div>
+
             </div>
-            <button type="submit" class="btn"><span>Search</span></button>
+
+            <div class="fare-type">
+
+                <div class="container1">
+
+                    <div class="special-fare">
+                        <p>Select a special fare</p>
+                    </div>
+
+                    <div class="extra-saving">
+                        <p>EXTRA SAVING</p>
+                    </div>
+
+                 </div>
+
+                 <div class="radio-buttons">
+
+                    <input type="radio" name="Fare" id="regualr fare" >
+                        <label for="regualr fare">Regular</label>
+
+                    <input type="radio" name="Fare" id="student fare">
+                        <label for="student fare">Student</label>
+
+                    <input type="radio" name="Fare" id="Armed Forces Fare">
+                        <label for="Armed Forces Fare">Armed Forces</label>
+
+                    <input type="radio" name="Fare" id="Senior Citizen Fare">
+                        <label for="Senior Citizen Fare">Senior Citizen </label>
+
+                    <input type="radio" name="Fare" id="Doctors & Nurses Fare">
+                        <label for="Doctors & Nurses Fare">Doctors </label>
+                    
+                </div>
+
+               
+            </div>
+
+            <div class="btn-parent">
+                <button type="submit" class="btn"><span>SEARCH</span></button>
+            </div>
+   
         </form>
+
     </div>
 </body>
+
 </html>
